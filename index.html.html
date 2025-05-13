@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1195,7 +1196,7 @@
 				<button id="nextBtn" class="control-btn neon-button" type="Button" title="nextBtn"><i
 						class="fas fa-step-forward"></i></button>
 				<button id="loopBtn" class="control-btn neon-button" type="Button" title="loopBtn" data-loop-state="none"><i
-						class="fas fa-redo"></i></button>
+						class="fa-solid fa-repeat"></i></button>
 			</div>
 			<!-- VOLUME CONTROL -->
 			<div class="volume-control">
@@ -2492,7 +2493,7 @@
 					// --- Stage 1: Activate LOOP ALL (Playlist) ---
 					loopState = 'all';
 					loopBtn.dataset.loopState = 'all';
-					loopBtn.innerHTML = '<i class="fa-solid fa-repeat" aria-hidden="true"></i>'; // Loop ALL icon
+					loopBtn.innerHTML = '<i class="fa-solid fa-rotate" aria-hidden="true"></i>'; // Loop ALL icon
 					loopBtn.setAttribute('aria-label', 'Loop All Enabled');
 					loopBtn.classList.add('active'); // Make button visually active
 					audioElement.loop = false; // Playlist loop is handled manually in 'playNext'
@@ -2502,7 +2503,7 @@
 					loopState = 'one';
 					loopBtn.dataset.loopState = 'one';
 					// Use the 'redo' icon again, but add text '1' to differentiate
-					loopBtn.innerHTML = '<i class="fa-solid fa-repeat" aria-hidden="true"></i> 1';
+					loopBtn.innerHTML = '<i class="fa-solid fa-rotate-right" aria-hidden="true"></i>';
 					loopBtn.setAttribute('aria-label', 'Loop One Enabled');
 					loopBtn.classList.add('active'); // Keep button visually active
 					audioElement.loop = true; // Enable the native HTML5 loop property for single track repeat
@@ -2511,7 +2512,7 @@
 					// --- Stage 3: Deactivate Loop (Back to NONE) ---
 					loopState = 'none';
 					loopBtn.dataset.loopState = 'none';
-					loopBtn.innerHTML = '<i class="fas fa-redo" aria-hidden="true"></i>'; // Loop OFF icon
+					loopBtn.innerHTML = '<i class="fa-solid fa-repeat" aria-hidden="true"></i>'; // Loop OFF icon
 					loopBtn.setAttribute('aria-label', 'Loop Disabled');
 					loopBtn.classList.remove('active'); // Make button visually inactive
 					audioElement.loop = false;
@@ -2524,7 +2525,7 @@
 			function init() {
 				// ... other initializations ...
 				loopBtn.dataset.loopState = 'none';
-				loopBtn.innerHTML = '<i class="fas fa-redo" aria-hidden="true"></i>'; // Loop OFF icon
+				loopBtn.innerHTML = '<i class="fa-solid fa-repeat" aria-hidden="true"></i>'; // Loop OFF icon
 				loopBtn.setAttribute('aria-label', 'Loop Disabled');
 				loopBtn.classList.remove('active');
 				audioElement.loop = false;
@@ -2742,7 +2743,7 @@
 				totalDurationDisplay.textContent = formatTime(0);
 				// Set initial button states visually
 				loopBtn.dataset.loopState = 'none';
-				loopBtn.innerHTML = '<i class="fas fa-redo" aria-hidden="true"></i>'; // Ensure correct initial icon & content
+				loopBtn.innerHTML = '<i class="fa-solid fa-repeat" aria-hidden="true"></i>'; // Ensure correct initial icon & content
 				loopBtn.setAttribute('aria-label', 'Loop Disabled');
 				shuffleBtn.classList.remove('active');
 				shuffleBtn.setAttribute('aria-pressed', 'false');
